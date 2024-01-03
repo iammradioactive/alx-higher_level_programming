@@ -1,6 +1,9 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
  * check_style - check if linked list contains a style
+ * @list: singly-linked list
  * Return: 1 if list has a cycle, 0 if it doesn't
  */
 
@@ -10,7 +13,7 @@ int check_cycle(listint_t *list)
 	listint_t *fast = list;
 
 	if (!list)
-		retunr (0);
+		return (0);
 
 	while (slow && fast && fast->next)
 	{
