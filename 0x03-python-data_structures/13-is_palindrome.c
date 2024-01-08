@@ -8,25 +8,24 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *cur = *head;
-	int tab[2048], i = 0, j = 0;
+	int arr[10000];
+	int i, n = 0;
+	listint_t *traverse;
 
-	if (*head)
+	if (head == NULL)
+		return (0);
+
+	traverse = *head;
+	while (traverse)
 	{
-		while (cur)
-		{
-			tab[i] = cur->n;
-			cur = cur->next;
-			i++;
-		}
+		arr[n++] = traverse->n;
+		traverse = traverse->next;
+	}
 
-		while (j < i / 2)
-		{
-			if (tab[j] == tab[i - j - 1])
-				j++;
-			else
-				return (0);
-		}
+	for (i = 0; i < n / 2; i++)
+	{
+		if (arr[i] != arr[n - i - 1])
+			return (0);
 	}
 	return (1);
 }
