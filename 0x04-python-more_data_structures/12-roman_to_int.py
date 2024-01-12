@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
     if type(roman_string) is str and roman_string:
         for c in range(len(roman_string) - 1, -1, -1):
             if rom_val[roman_string[c]] >= prev_val:
-                result += rom_val[roman_string[c]
+                result += rom_val[roman_string[c]]
             else:
                 result -= rom_val[roman_string[c]]
             p = rom_val[roman_string[c]]
