@@ -17,10 +17,10 @@ class Square:
         else:
             self.__size = size #: size of square
 
-        def area(self):
-            """returns the area
+def area(self):
+    """returns the area
 
-            Returns:
-                area
-            """
-            return self.__size**2
+    Returns:
+        area
+    """
+    return self.__size**2
